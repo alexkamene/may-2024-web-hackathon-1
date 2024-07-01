@@ -5,20 +5,23 @@
 
 .main{
     width: 100%;
+    height: 100vh;
     background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(1.jpeg);
     background-position: center;
     background-size: cover;
-    height: 100vh;
 }
 
 .navbar{
-    width: 1200px;
+    
     height: 75px;
     margin: auto;
+    display: flex;
+    
+    flex-direction: row;
 }
 .icon{
     width: 200px;
-    float: left;
+    /* float: left; */
     height: 70px;
 }
 
@@ -27,28 +30,30 @@
     font-size: 35px;
     font-family: Arial;
     padding-left: 20px;
-    float: left;
+    /* float: left; */
     padding-top: 10px;
     margin-top: 5px
 }
 
 .menu{
     width: 400px;
-    float: left;
+    /* float: left; */
     height: 70px;
     font-family:Arial;
+    display: flex;
 }
 
 ul{
     float: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* flex-direction: row; */
+    flex-wrap: nowrap;
+    
 }
 
 ul li{
     list-style: none;
-    margin-left: 62px;
+    margin-left: 49px;
     margin-top: 27px;
     font-size: 14px;
   
@@ -68,9 +73,9 @@ ul li a:hover{
 }
 
 .search{
-    width: 330px;
+    width: 325px;
     float: left;
-    margin-left: 270px;
+    margin-left: 20px;
 }
 
 .srch{
@@ -117,11 +122,12 @@ ul li a:hover{
 }
 
 .content{
-    width: 1200px;
-    height: auto;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     color: #fff;
-    position: relative;
+    /* position: relative; */
 }
 
 .content .par{
@@ -173,13 +179,11 @@ ul li a:hover{
 .form{
     width: 250px;
     height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: -20px;
-    left: 871px;
-    transform: translate(0%,-5%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
+    transform: translate(0%, -5%);
     border-radius: 10px;
     padding: 25px;
+    margin-top: 76px;
 }
 
 .form h2{
@@ -267,4 +271,14 @@ ul li a:hover{
 }
 .icons ion-icon:hover{
     color: #ff7200;
+}
+@media screen and (max-width: 992px){
+
+    ul li{
+        font-size: 11px;
+        margin-left: 20px;
+    }
+    .par{
+        font-size: 12px;
+    }
 }
